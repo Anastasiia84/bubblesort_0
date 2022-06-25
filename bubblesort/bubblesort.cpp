@@ -10,15 +10,13 @@ public:
 
     }
     void bubble_sort(int Array[], int size);
-    void Input(int Array[], int n);
-    void Print(int Array[], int n);
     int Array[100];
     int n;
     int temp;
     ~BubbleSort(){}
 };
 
-void BubbleSort:: Input(int Array[], int n) {
+void Input(int Array[], int n) {
     cout << "Enter values: "<<endl;
     for (int i = 0; i <= n - 1; i++) {
         cin >> Array[i];
@@ -44,7 +42,7 @@ void BubbleSort::bubble_sort(int Array[], int n) {
 }
 
 
-void BubbleSort::Print(int Array[], int n) {
+void Print(int Array[], int n) {
 
    
     cout << "Elements of your sorted list:  ";
@@ -59,11 +57,10 @@ int main() {
     cout << "Enter the count of element: " ;
     cin >> n;
     int* Arr = new int[n];
-
     BubbleSort B;
-    B.Input(Arr, n);
+    Input(Arr, n);
     B.bubble_sort(Arr, n);
-    B.Print(Arr, n);
+    Print(Arr, n);
     return 0;
 }
 
