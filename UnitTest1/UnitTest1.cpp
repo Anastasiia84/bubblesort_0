@@ -17,7 +17,7 @@ namespace UnitTest1
 			int Array[] = { 1, 5, 8, 7, 7 };
 			int size = sizeof(Array);
 
-			B.Input(Array, 5);
+			Input(Array, 5);
 			Assert::IsTrue(5 == size);
 		}
 	};
@@ -29,7 +29,7 @@ namespace UnitTest1
 		{
 			BubbleSort B;
 			int Array[] = { 1,5,8,7,7 };
-			B.Input(Array, 5);
+			Input(Array, 5);
 			int x = Array[0];
 			Assert::IsTrue(1 == x);
 		}
@@ -45,8 +45,11 @@ namespace UnitTest1
 			int i;
 			int Array[] = { 1,5,8,7,7 };
 			int SortArray[] = { 1,5,7,7,8 };
-			B.Input(Array, 5);
-			Assert::IsTrue(SortArray[i] <= SortArray[i + 1]);
+			const unsigned int count = 5;
+			Input(Array, count);
+			for (int i = 0; i < count; i++)
+			{
+			Assert::IsTrue(SortArray[i] <= SortArray[i + 1]);}
 		}
 	};
 
