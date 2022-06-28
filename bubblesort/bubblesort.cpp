@@ -6,14 +6,7 @@ using namespace std;
 
 class BubbleSort {
 public:
-    BubbleSort() {
-
-    }
     void bubble_sort(int Array[], int size);
-    int Array[100];
-    int n;
-    int temp;
-    ~BubbleSort(){}
 };
 
 void Input(int Array[], int n) {
@@ -31,6 +24,7 @@ void Input(int Array[], int n) {
 
 
 void BubbleSort::bubble_sort(int Array[], int n) {
+    int temp;
     for (int m = 0; m < n; m++)
         for (int i = 0; i < n - m - 1; i++)
             if (Array[i] > Array[i + 1]) {
@@ -54,6 +48,7 @@ void Print(int Array[], int n) {
 
 int main() {
     int n;
+     int Array[100];
     cout << "Enter the count of element: " ;
     cin >> n;
     int* Arr = new int[n];
