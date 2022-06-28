@@ -12,11 +12,9 @@ namespace UnitTest1
 
 		TEST_METHOD(InputTestMethod1)
 		{
-			BubbleSort B;
 			int i;
 			int Array[] = { 1, 5, 8, 7, 7 };
 			int size = sizeof(Array);
-
 			Input(Array, 5);
 			Assert::IsTrue(5 == size);
 		}
@@ -27,7 +25,6 @@ namespace UnitTest1
 
 		TEST_METHOD(InputTestMethod2)
 		{
-			BubbleSort B;
 			int Array[] = { 1,5,8,7,7 };
 			Input(Array, 5);
 			int x = Array[0];
@@ -41,7 +38,6 @@ namespace UnitTest1
 
 		TEST_METHOD(SortTestMethod3)
 		{
-			BubbleSort B;
 			int i;
 			int Array[] = { 1,5,8,7,7 };
 			int SortArray[] = { 1,5,7,7,8 };
@@ -61,7 +57,6 @@ namespace UnitTest1
 		TEST_METHOD(SortTestMethod4)
 		{
 			BubbleSort B;
-			int z;
 			const unsigned int count = 5;
 			int Array[count] = { 5, 3, 10, 2, 7 };
 			int SortArray[count] = { 2, 3, 5, 7, 10 };
@@ -84,7 +79,6 @@ namespace UnitTest1
 			const unsigned int count = 5;
 			int Array[count] = { 3, 3, 3, 3, 3 };
 			int SortedArray[count] = { 3, 3, 5, 3, 3 };
-
 			B.bubble_sort(Array, count);
 			for (int i = 0; i < count; i++)
 			{
